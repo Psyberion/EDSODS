@@ -35,7 +35,7 @@ CREATE TABLE event_AfmuRepairs (
         event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
         Module                  ARCHAR(100)    	NULL,           -- AfmuRepairs.Module
         Module_Localised        VARCHAR(100)    NULL,           -- AfmuRepairs.Module_Localised
-        FullyRepaired           CHAR(1)    	    NULL,           -- AfmuRepairs.FullyRepaired
+        FullyRepaired           CHAR(1)         NULL,           -- AfmuRepairs.FullyRepaired
         Health                  MAL(7,6)        NULL,           -- AfmuRepairs.Health
         PRIMARY KEY             (event_id)
 );
@@ -55,13 +55,13 @@ CREATE TABLE event_ApproachBody (
 CREATE TABLE event_ApproachSettlement (
         event_id                INT             NOT NULL,       -- event.id
         event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
-        Name                    VARCHAR(100)    NULL,           -- event.Name
-        MarketID                BIGINT          NULL,           -- event.MarketID
-        SystemAddress           BIGINT          NULL,           -- event.SystemAddress
-        BodyID                  INT             NULL,           -- event.BodyID
-        BodyName                VARCHAR(100)    NULL,           -- event.BodyName
-        Latitude                DECIMAL(9,6)    NULL,           -- event.Latitude
-        Longitude               DECIMAL(9,6)    NULL,           -- event.Longitude
+        Name                    VARCHAR(100)    NULL,           -- ApproachSettlement.Name
+        MarketID                BIGINT          NULL,           -- ApproachSettlement.MarketID
+        SystemAddress           BIGINT          NULL,           -- ApproachSettlement.SystemAddress
+        BodyID                  INT             NULL,           -- ApproachSettlement.BodyID
+        BodyName                VARCHAR(100)    NULL,           -- ApproachSettlement.BodyName
+        Latitude                DECIMAL(9,6)    NULL,           -- ApproachSettlement.Latitude
+        Longitude               DECIMAL(9,6)    NULL,           -- ApproachSettlement.Longitude
         PRIMARY KEY             (event_id)
 );
 
@@ -69,15 +69,38 @@ CREATE TABLE event_ApproachSettlement (
 CREATE TABLE event_AsteroidCracked (
         event_id                INT             NOT NULL,       -- event.id
         event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
-        Body                    VARCHAR(100)    NULL,           -- event.Body
+        Body                    VARCHAR(100)    NULL,           -- AsteroidCracked.Body
         PRIMARY KEY             (event_id)
 );
 
+<<<<<<< HEAD
 -- Event: Bounty
 CREATE TABLE event_Bounty (
         event_id                INT             NOT NULL,       -- event.id
         event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
         
+=======
+-- Event: Bounty TODO: Confirm with actual records
+CREATE TABLE event_Bounty (
+        event_id                INT             NOT NULL,       -- event.id
+        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
+        Target                  VARCHAR(100)    NULL,           -- Bounty.Target
+        TotalReward             BIGINT          NULL,           -- Bounty.TotalReward
+        VictimFaction           VARCHAR(100)    NULL,           -- Bounty.VictimFaction
+        SharedWithOthers        INT             NULL,           -- Bounty.SharedWithOthers
+        Faction                 VARCHAR(100)    NULL,           -- Bounty.Faction
+        Reward                  BIGINT          NULL,           -- Bounty.Reward
+        PRIMARY KEY             (event_id)
+);
+
+-- Event: Bounty TODO: Confirm with actual records
+CREATE TABLE event_Bounty_Rewards (
+        event_id                INT             NOT NULL,       -- event.id
+        idx                     INT             NOT NULL,       -- Bounty.Rewards[index]
+        Faction                 VARCHAR(100)    NULL,           -- Bounty.Rewards[].Faction
+        Reward                  BIGINT          NULL,           -- Bounty.Rewards[].Reward
+        PRIMARY KEY             (event_id, idx)
+>>>>>>> d47a3bf2cc02a3ee9be1385e770c295205062ac7
 );
 
 -- Event: BuyAmmo
