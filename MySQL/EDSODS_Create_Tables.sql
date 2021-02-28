@@ -74,7 +74,11 @@ CREATE TABLE event_AsteroidCracked (
 );
 
 -- Event: Bounty
-CREATE TABLE event_Bounty ();
+CREATE TABLE event_Bounty (
+        event_id                INT             NOT NULL,       -- event.id
+        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
+        
+);
 
 -- Event: BuyAmmo
 CREATE TABLE event_BuyAmmo ();
