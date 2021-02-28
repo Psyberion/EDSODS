@@ -73,13 +73,6 @@ CREATE TABLE event_AsteroidCracked (
         PRIMARY KEY             (event_id)
 );
 
-<<<<<<< HEAD
--- Event: Bounty
-CREATE TABLE event_Bounty (
-        event_id                INT             NOT NULL,       -- event.id
-        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
-        
-=======
 -- Event: Bounty TODO: Confirm with actual records
 CREATE TABLE event_Bounty (
         event_id                INT             NOT NULL,       -- event.id
@@ -100,7 +93,6 @@ CREATE TABLE event_Bounty_Rewards (
         Faction                 VARCHAR(100)    NULL,           -- Bounty.Rewards[].Faction
         Reward                  BIGINT          NULL,           -- Bounty.Rewards[].Reward
         PRIMARY KEY             (event_id, idx)
->>>>>>> d47a3bf2cc02a3ee9be1385e770c295205062ac7
 );
 
 -- Event: BuyAmmo
