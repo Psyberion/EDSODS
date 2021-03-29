@@ -72,6 +72,8 @@ UNION SELECT 'event_AfmuRepairs',                               COUNT(*) FROM ev
 UNION SELECT 'event_ApproachBody',                              COUNT(*) FROM event_ApproachBody
 UNION SELECT 'event_ApproachSettlement',                        COUNT(*) FROM event_ApproachSettlement
 UNION SELECT 'event_AsteroidCracked',                           COUNT(*) FROM event_AsteroidCracked
+UNION SELECT 'event_Bounty',                                    COUNT(*) FROM event_Bounty
+UNION SELECT 'event_Bounty_Rewards',                            COUNT(*) FROM event_Bounty_Rewards
 UNION SELECT 'event_Commander',                                 COUNT(*) FROM event_Commander
 UNION SELECT 'event_EngineerProgress',                          COUNT(*) FROM event_EngineerProgress
 UNION SELECT 'event_FSDJump',                                   COUNT(*) FROM event_FSDJump

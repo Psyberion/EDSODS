@@ -80,7 +80,7 @@ CREATE TABLE event_Bounty (
         Target                  VARCHAR(100)    NULL,           -- Bounty.Target
         TotalReward             BIGINT          NULL,           -- Bounty.TotalReward
         VictimFaction           VARCHAR(100)    NULL,           -- Bounty.VictimFaction
-        SharedWithOthers        INT             NULL,           -- Bounty.SharedWithOthers
+        SharedWithOthers        BIGINT          NULL,           -- Bounty.SharedWithOthers
         Faction                 VARCHAR(100)    NULL,           -- Bounty.Faction
         Reward                  BIGINT          NULL,           -- Bounty.Reward
         PRIMARY KEY             (event_id)
