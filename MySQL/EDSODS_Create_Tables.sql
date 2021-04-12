@@ -96,10 +96,23 @@ CREATE TABLE event_Bounty_Rewards (
 );
 
 -- Event: BuyAmmo
-CREATE TABLE event_BuyAmmo ();
+CREATE TABLE event_BuyAmmo (
+        event_id                INT             NOT NULL,       -- event.id
+        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
+        Cost                    BIGINT          NULL,           -- BuyAmmo.Cost
+        PRIMARY KEY             (event_id)
+);
 
 -- Event: BuyDrones
-CREATE TABLE event_BuyDrones ();
+CREATE TABLE event_BuyDrones (
+        event_id                INT             NOT NULL,       -- event.id
+        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
+        Type                    VARCHAR(100)    NULL,           -- BuyDrones.Type
+        Count                   INT             NULL,           -- BuyDrones.Count
+        BuyPrice                BIGINT          NULL,           -- BuyDrones.BuyPrice
+        TotalCost               BIGINT          NULL,           -- BuyDrones.TotalCost
+        PRIMARY KEY             (event_id)
+);
 
 -- Event: Cargo
 CREATE TABLE event_Cargo ();
