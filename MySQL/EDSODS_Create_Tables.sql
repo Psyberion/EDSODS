@@ -115,7 +115,24 @@ CREATE TABLE event_BuyDrones (
 );
 
 -- Event: Cargo
-CREATE TABLE event_Cargo ();
+CREATE TABLE event_Cargo (
+        event_id                INT             NOT NULL,       -- event.id
+        event_timestamp         DATETIME        NOT NULL,       -- event.timestamp
+        Vessel                  VARCHAR(100)    NULL,           -- Cargo.Vessel
+        Count                   INT             NULL,           -- Cargo.Count
+        PRIMARY KEY             (event_id)
+);
+
+CREATE TABLE event_Cargo_Inventory (
+        event_id                INT             NOT NULL,       -- event.id
+        idx                     INT             NOT NULL,       -- Cargo.Inventory[index]
+        Name                    VARCHAR(100)    NULL,           -- Cargo.Inventory[].Name
+        Name_Localised          VARCHAR(100)    NULL,           -- Cargo.Inventory[].Name_Localised
+        MissionID               BIGINT          NULL,           -- Cargo.Inventory[].MissionID
+        Count                   INT             NULL,           -- Cargo.Inventory[].Count
+        Stolen                  CHAR(1)         NULL,           -- Cargo.Inventory[].Stolen
+        PRIMARY KEY             (event_id, idx)
+);
 
 -- Event: CargoDepot
 CREATE TABLE event_CargoDepot ();

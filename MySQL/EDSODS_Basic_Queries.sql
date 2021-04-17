@@ -7,6 +7,9 @@ DROP TABLE event_AsteroidCracked;
 DROP TABLE event_Bounty;
 DROP TABLE event_Bounty_Rewards;
 DROP TABLE event_BuyAmmo;
+DROP TABLE event_BuyDrones;
+DROP TABLE event_Cargo;
+DROP TABLE event_Cargo_Inventory;
 DROP TABLE event_Commander;
 DROP TABLE event_EngineerProgress;
 DROP TABLE event_FSDJump;
@@ -47,6 +50,9 @@ TRUNCATE TABLE event_AsteroidCracked;
 TRUNCATE TABLE event_Bounty;
 TRUNCATE TABLE event_Bounty_Rewards;
 TRUNCATE TABLE event_BuyAmmo;
+TRUNCATE TABLE event_BuyDrones;
+TRUNCATE TABLE event_Cargo;
+TRUNCATE TABLE event_Cargo_Inventory;
 TRUNCATE TABLE event_Commander;
 TRUNCATE TABLE event_EngineerProgress;
 TRUNCATE TABLE event_FSDJump;
@@ -81,6 +87,7 @@ TRUNCATE TABLE log;
 -- Select sample from events table
 SELECT * FROM event WHERE type = 'AsteroidCracked' LIMIT 10;
 SELECT * FROM event WHERE type = 'BuyAmmo' LIMIT 10;
+SELECT * FROM event WHERE type = 'BuyDrones' LIMIT 10;
 
 -- Table record counts
 SELECT 'log' Table_Name,                                        COUNT(*) Records FROM log
@@ -93,6 +100,9 @@ UNION SELECT 'event_AsteroidCracked',                           COUNT(*) FROM ev
 UNION SELECT 'event_Bounty',                                    COUNT(*) FROM event_Bounty
 UNION SELECT 'event_Bounty_Rewards',                            COUNT(*) FROM event_Bounty_Rewards
 UNION SELECT 'event_BuyAmmo',                                   COUNT(*) FROM event_BuyAmmo
+UNION SELECT 'event_BuyDrones',                                 COUNT(*) FROM event_BuyDrones
+UNION SELECT 'event_Cargo',                                     COUNT(*) FROM event_Cargo
+UNION SELECT 'event_Cargo_Inventory',                           COUNT(*) FROM event_Cargo_Inventory;
 UNION SELECT 'event_Commander',                                 COUNT(*) FROM event_Commander
 UNION SELECT 'event_EngineerProgress',                          COUNT(*) FROM event_EngineerProgress
 UNION SELECT 'event_FSDJump',                                   COUNT(*) FROM event_FSDJump
@@ -132,6 +142,9 @@ SELECT * FROM event_AsteroidCracked LIMIT 10;
 SELECT * FROM event_Bounty LIMIT 10;
 SELECT * FROM event_Bounty_Rewards LIMIT 10;
 SELECT * FROM event_BuyAmmo LIMIT 10;
+SELECT * FROM event_BuyDrones LIMIT 10;
+SELECT * FROM event_Cargo LIMIT 10;
+SELECT * FROM event_Cargo_Inventory LIMIT 10;
 SELECT * FROM event_Commander LIMIT 10;
 SELECT * FROM event_EngineerProgress LIMIT 10;
 SELECT * FROM event_FSDJump LIMIT 10;
