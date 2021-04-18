@@ -102,7 +102,7 @@ UNION SELECT 'event_Bounty_Rewards',                            COUNT(*) FROM ev
 UNION SELECT 'event_BuyAmmo',                                   COUNT(*) FROM event_BuyAmmo
 UNION SELECT 'event_BuyDrones',                                 COUNT(*) FROM event_BuyDrones
 UNION SELECT 'event_Cargo',                                     COUNT(*) FROM event_Cargo
-UNION SELECT 'event_Cargo_Inventory',                           COUNT(*) FROM event_Cargo_Inventory;
+UNION SELECT 'event_Cargo_Inventory',                           COUNT(*) FROM event_Cargo_Inventory
 UNION SELECT 'event_Commander',                                 COUNT(*) FROM event_Commander
 UNION SELECT 'event_EngineerProgress',                          COUNT(*) FROM event_EngineerProgress
 UNION SELECT 'event_FSDJump',                                   COUNT(*) FROM event_FSDJump
