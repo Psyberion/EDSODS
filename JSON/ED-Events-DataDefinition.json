@@ -1,0 +1,32 @@
+{
+    "AfmuRepairs":{
+        "table":"event_AfmuRepairs",
+        "fields":[
+            { "name":"Module",              "type":"VarChar",   "size":100  },
+            { "name":"Module_Localised",    "type":"VarChar",   "size":100  },
+            { "name":"FullyRepaired",       "type":"VarChar",   "size":1    },
+            { "name":"Health",              "type":"Decimal"                }
+        ]
+    },
+    "ApproachBody":{
+        "table":"event_ApproachBody",
+        "fields":[
+            { "name":"StarSystem",          "type":"VarChar",   "size":100  },
+            { "name":"SystemAddress",       "type":"Int64"                  },
+            { "name":"Body",                "type":"VarChar",   "size":100  },
+            { "name":"BodyID",              "type":"Int32"                  }
+        ]
+    },
+    "ApproachSettlement":{
+        "table":"event_ApproachSettlement",
+        "fields":[
+            { "name":"Name",                "type":"VarChar",   "size":100  },
+            { "name":"MarketID",            "type":"Int64"                  },
+            { "name":"SystemAddress",       "type":"Int64"                  },
+            { "name":"BodyID",              "type":"Int32"                  },
+            { "name":"BodyName",            "type":"VarChar",   "size":100  },
+            { "name":"Latitude",            "type":"Decimal"                },
+            { "name":"Longitude",           "type":"Decimal"                }
+        ]
+    }
+}
