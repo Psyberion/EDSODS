@@ -175,7 +175,7 @@ CREATE TABLE event_CrewAssign ();
 
 -- Event: EngineerProgress
 CREATE TABLE event_EngineerProgress (
-        event_id                        INT             NOT NULL,       -- event.id
+event_id                        INT             NOT NULL,       -- event.id
         event_timestamp                 DATETIME        NOT NULL,       -- event.timestamp
         Engineer                        VARCHAR(100)    NULL,           -- EngineerProgress.Engineers[].Engineer
         EngineerID                      INT             NOT NULL,       -- EngineerProgress.Engineers[].EngineerID

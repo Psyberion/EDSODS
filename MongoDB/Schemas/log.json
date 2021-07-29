@@ -1,0 +1,21 @@
+db.createCollection("log", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["timestamp", "message"],
+            properties: {
+                timestamp: {
+                    bsonType: "date",
+                    description: "When the log entry occurred"
+                },
+                message: {
+                    bsonType: "string",
+                    description: "Log entry text"
+                },
+                event_id: {
+                    bsonType: "objectId"
+                }
+            }
+        }
+    }
+})

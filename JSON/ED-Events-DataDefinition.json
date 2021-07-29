@@ -2,31 +2,159 @@
     "AfmuRepairs":{
         "table":"event_AfmuRepairs",
         "fields":[
-            { "name":"Module",              "type":"VarChar",   "size":100  },
-            { "name":"Module_Localised",    "type":"VarChar",   "size":100  },
-            { "name":"FullyRepaired",       "type":"VarChar",   "size":1    },
-            { "name":"Health",              "type":"Decimal"                }
+            { "name":"Module",                          "type":"VarChar",   "size":100  },
+            { "name":"Module_Localised",                "type":"VarChar",   "size":100  },
+            { "name":"FullyRepaired",                   "type":"VarChar",   "size":1    },
+            { "name":"Health",                          "type":"Decimal"                }
         ]
     },
     "ApproachBody":{
         "table":"event_ApproachBody",
         "fields":[
-            { "name":"StarSystem",          "type":"VarChar",   "size":100  },
-            { "name":"SystemAddress",       "type":"Int64"                  },
-            { "name":"Body",                "type":"VarChar",   "size":100  },
-            { "name":"BodyID",              "type":"Int32"                  }
+            { "name":"StarSystem",                      "type":"VarChar",   "size":100  },
+            { "name":"SystemAddress",                   "type":"Int64"                  },
+            { "name":"Body",                            "type":"VarChar",   "size":100  },
+            { "name":"BodyID",                          "type":"Int32"                  }
         ]
     },
     "ApproachSettlement":{
         "table":"event_ApproachSettlement",
         "fields":[
-            { "name":"Name",                "type":"VarChar",   "size":100  },
-            { "name":"MarketID",            "type":"Int64"                  },
-            { "name":"SystemAddress",       "type":"Int64"                  },
-            { "name":"BodyID",              "type":"Int32"                  },
-            { "name":"BodyName",            "type":"VarChar",   "size":100  },
-            { "name":"Latitude",            "type":"Decimal"                },
-            { "name":"Longitude",           "type":"Decimal"                }
+            { "name":"Name",                            "type":"VarChar",   "size":100  },
+            { "name":"MarketID",                        "type":"Int64"                  },
+            { "name":"SystemAddress",                   "type":"Int64"                  },
+            { "name":"BodyID",                          "type":"Int32"                  },
+            { "name":"BodyName",                        "type":"VarChar",   "size":100  },
+            { "name":"Latitude",                        "type":"Decimal"                },
+            { "name":"Longitude",                       "type":"Decimal"                }
+        ]
+    },
+    "AsteriodCracked":{
+        "table":"event_AsteroidCracked",
+        "fields":[
+            { "name":"Body",                            "type":"VarChar",   "size":100  }
+        ]
+    },
+    "Bounty":{
+        "table":"event_Bounty",
+        "fields":[
+            {
+                "name":"Rewards",
+                "table":"event_Bounty_Rewards",
+                "fields":[
+                    { "name":"Faction",                 "type":"VarChar",   "size":100  },
+                    { "name":"Reward",                  "type":"Int64"                  }
+                ]
+            },
+            { "name":"Target",                          "type":"VarChar",   "size":100  },
+            { "name":"TotalReward",                     "type":"Int64"                  },
+            { "name":"VictimFaction",                   "type":"VarChar",   "size":100  },
+            { "name":"SharedWithOthers",                "type":"Int64"                  },
+            { "name":"Faction",                         "type":"VarChar",   "size":100  },
+            { "name":"Reward",                          "type":"Int64"                  }
+        ]
+    },
+    "BuyAmmo":{
+        "table":"event_BuyAmmo",
+        "fields":[
+            { "name":"Cost",                            "type":"Int64"                  }
+        ]
+    },
+    "BuyDrones":{
+        "table":"event_BuyDrones",
+        "fields":[
+            { "name":"Type",                            "type":"VarChar",   "size":100  },
+            { "name":"Count",                           "type":"Int32"                  },
+            { "name":"BuyPrice",                        "type":"Int64"                  },
+            { "name":"TotalCost",                       "type":"Int64"                  }
+        ]
+    },
+    "Cargo":{
+        "table":"event_Cargo",
+        "fields":[
+            { "name":"Vessel",                          "type":"VarChar",   "size":100  },
+            { "name":"Count",                           "type":"Int32"                  },
+            {
+                "name":"Inventory",
+                "table":"event_Cargo_Inventory",
+                "fields":[
+                    { "name":"Name",                    "type":"VarChar",   "size":100  },
+                    { "name":"Name_Localised",          "type":"VarChar",   "size":100  },
+                    { "name":"MissionID",               "type":"Int64"                  },
+                    { "name":"Count",                   "type":"Int32"                  },
+                    { "name":"Stolen",                  "type":"VarChar",   "size":1    }
+                ]
+            }
+        ]
+    },
+    "CargoDepot":{
+    },
+    "CockpitBreached":{
+    },
+    "CodexEntry":{
+    },
+    "CollectCargo":{
+    },
+    "Commander":{
+        "table":"event_Commander",
+        "fields":[
+            { "name":"FID",                             "type":"VarChar",   "size":100  },
+            { "name":"Name",                            "type":"VarChar",   "size":100  }
+        ]
+    },
+    "CommitCrime":{
+    },
+    "CommunityGoal":{
+    },
+    "CommunityGoalJoin":{
+    },
+    "CommunityGoalReward":{
+    },
+    "CrewAssign":{
+    },
+    "EngineerProgress":{
+        "table":"event_EngineerProgress",
+        "source":"Engineers",
+        "fields":[
+            { "name":"Engineer",                        "type":"VarChar",   "size":100  },
+            { "name":"EngineerID",                      "type":"Int32"                  },
+            { "name":"Progress",                        "type":"VarChar",   "size":100  },
+            { "name":"RankProgress",                    "type":"Int32"                  },
+            { "name":"Rank",                            "type":"Int32"                  }
+        ]
+    },
+    "FSDJump":{
+        "table":"event_FSDJump",
+        "fields":[
+            { "name":"StarSystem",                      "type":"VarChar",   "size":100  },
+            { "name":"SystemAddress",                   "type":"Int64"                  },
+            { "name":"StarPosX",                        "type":"Decimal",               "path":"StarPos[0]"   },
+            { "name":"StarPosY",                        "type":"Decimal",               "path":"StarPos[1]"   },
+            { "name":"StarPosZ",                        "type":"Decimal",               "path":"StarPos[2]"   },
+            { "name":"SystemAllegiance",                "type":"VarChar",   "size":100  },
+            { "name":"SystemEconomy",                   "type":"VarChar",   "size":100  },
+            { "name":"SystemEconomy_Localised",         "type":"VarChar",   "size":100  },
+            { "name":"SystemSecondEconomy",             "type":"VarChar",   "size":100  },
+            { "name":"SystemSecondEconomy_Localised",   "type":"VarChar",   "size":100  },
+            { "name":"SystemGovernment",                "type":"VarChar",   "size":100  },
+            { "name":"SystemGovernment_Localised",      "type":"VarChar",   "size":100  },
+            { "name":"SystemSecurity",                  "type":"VarChar",   "size":100  },
+            { "name":"SystemSecurity_Localised",        "type":"VarChar",   "size":100  },
+            { "name":"Population",                      "type":"Int64"                  },
+            { "name":"Body",                            "type":"VarChar",   "size":100  },
+            { "name":"BodyID",                          "type":"Int64"                  },
+            { "name":"BodyType",                        "type":"VarChar",   "size":100  },
+            { "name":"JumpDist",                        "type":"Decimal"                },
+            { "name":"FuelUsed",                        "type":"Decimal"                },
+            { "name":"FuelLevel",                       "type":"Decimal"                },
+            {
+                "name":"SystemFaction_Name",            "type":"VarChar",   "size":100, 
+                "paths":[
+                    {"path":"SystemFaction"},
+                    {"path":"SystemFaction.Name"}
+                ]
+            },
+            { "name":"SystemFaction_FactionState",      "type":"VarChar",   "size":100, "path":"SystemFaction.FactionState" }
         ]
     }
 }
